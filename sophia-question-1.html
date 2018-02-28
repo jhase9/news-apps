@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <style>
+    .button{
+        margin-top: 14px;
+        font-size:16px;
+        text-align:center;
+        margin-right:19px;
+        font-weight: bolder;
+}
+        .texty {
+            width: 200px;
+            height:20px;
+            font-size:16px;
+            text-align:center;
+        }
+        
+
+        body{
+            text-align:center;
+            font-size:16px
+        }
+        
+            
+        .questions{
+            font-size:16px;
+            margin-bottom:14px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function hideOld() {
+            var x = document.getElementById("first");
+                x.style.display = "none";
+            } 
+
+
+        function showNew(){
+            var x = document.getElementById("second");
+                    x.style.display = "block";
+        }
+        
+        var input1;
+     
+        function store1() {
+            input1 = document.getElementById('answer1').value;
+        }
+        
+        function print1(){
+            stringy1 = "robbery";
+            stringy2 = "robberies";
+            stringy3 = "dating violence";
+            stringy4 = "dating";
+            stringy5 = "date";
+            stringy6 = "violence";
+            if (input1.toUpperCase() == stringy1.toUpperCase() || input1.toUpperCase() == stringy2.toUpperCase()){
+                document.getElementById("inputty1").innerHTML = "Nope. While robberies make up 40% of crimes alerted to students, they constitute less than 10% of the crimes reported to Public Safety."+"\n"+"Dating violence made up almost 15% of crimes reported to Public Safety, but have never been alerted to students.";
+            }
+            else if (input1.toUpperCase() == stringy3.toUpperCase() || input1.toUpperCase() == stringy4.toUpperCase() || input1.toUpperCase() == stringy5.toUpperCase() || input1.toUpperCase() == stringy6.toUpperCase()){
+                document.getElementById("inputty1").innerHTML = "Correct! Dating violence made up almost 15% of crimes reported to Public Safety. while robberies made up less than 10%."+"<br>"+ "However, while robberies make up 40% of crimes alerted to students, students are have never been alerted about dating violence.";
+            }
+            else{
+                document.getElementById("inputty1").innerHTML = "Good guess. Dating violence actually made up almost 15% of crimes reported to Public Safety, while robberies made up less than 10%."+"\n"+ "However, while robberies make up 40% of crimes alerted to students, students have never been alerted about dating violence.";
+            }
+        };
+        
+    </script>
+    <body>    
+        <div id="first" > <p class="questions">Which do you think constitutes a greater percentage of reported crime on campus: robbery or dating violence?</p>
+    <input type="text" id="answer1" class="texty"><br>
+       <input type="button" class="button" value="submit" onclick="hideOld();showNew();store1();print1();"/></div>
+        <div id="second" style="display:none"><p id="inputty1"></p></div>
+</body>
+</head>
+</html>

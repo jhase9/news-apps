@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>reading tester</title>
+    <style>
+    .button{
+        margin-top: 14px;
+        font-size:16px;
+        text-align:center;
+        margin-right:19px;
+        font-weight: bolder;
+}
+        
+         .boxy {
+            width: 40px;
+            height:30px;
+            font-size:25px;
+            text-align:center;  
+            }
+
+        body{
+            text-align:center;
+            font-size:16px
+        }
+        
+            
+        .questions{
+            font-size:16px;
+            margin-bottom:14px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function hideOld2(){
+            var x = document.getElementById("third");
+                    x.style.display = "none";
+
+        }
+        
+        function showNew2(){
+            var x = document.getElementById("final");
+                    x.style.display = "block";
+
+        } 
+        
+        var input2;
+     
+        
+        function store2() {
+            input2 = document.getElementById('answer2').value;
+        }
+        
+        
+        function print2(){
+            if (parseInt(input2) > 58 && parseInt(input2) < 75){
+               document.getElementById("inputty2").innerHTML = "You said "+input2.bold()+"%. Good guess!"; 
+            }
+            else{
+               document.getElementById("inputty2").innerHTML = "You said "+input2.bold()+"%. That's a bit off!"; 
+            }
+            
+            
+        }
+        
+    </script>
+    <body>    
+        
+    <div id="third"> <p class="questions">What percent of sexual offense crimes reported to Public Safety happen in residence halls?</p>
+  <input style="font-size:25px;" type = "text" id="answer2" class="boxy"/><span style="font-size:25px">%</span><br>
+        <input type="button" class="button" value="submit" onclick="hideOld2();showNew2();store2();print2();"/></div>
+        <div id="final" style="display:none">
+            <p style="font-size:16" id="inputty2"></p><p><strong>64%</strong> of sexual offense crimes reported to Public Safety occur in residence halls.<br> However, Public Safety alert emails about sexual offenses only refer to offenses in residence halls one-third of the time.</p>
+        </div>
+    
+</body>
+</head>
+</html>

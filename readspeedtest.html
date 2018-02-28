@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>reading tester</title>
+    <script type="text/javascript">
+        var check = null;
+        var cnt = 0;
+
+        function printDuration() {
+            if (check == null) {
+                cnt = 0;
+                check = setInterval(function () {
+                    cnt += 1;
+                }, 1000);
+            }
+            return cnt;
+        }
+        
+        function showTester() {
+            var x = document.getElementById("tester");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+            } 
+
+}
+        function hideTester(){
+            var x = document.getElementById("clicky");
+                    x.style.display = "none";
+        }
+        
+        function hideTester1(){
+            var x = document.getElementById("clicky2");
+                    x.style.display = "none";
+        }
+        
+        function stop() {
+            clearInterval(check);
+            check2 = parseInt((48*60)/cnt);
+            check3 = parseInt(853906048000/(check2*525600));
+            check6 = (853906048000/(check2*1440));
+            check5=(853906048000/(check2*10080));
+            check4 = parseInt(check5/(32429));
+            checkdays = parseInt(check6/(32429));
+
+            document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";
+            check=null;
+            if (check4 < 2){
+               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";;
+            }
+            if (check4 <= 1){
+               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+checkdays.toLocaleString()+" days of reading 24/7 to finish.";
+            }
+            if(cnt === 0){
+                 document.getElementById("para3").innerHTML = "Cheater. But if you're an average reader, we can still let you know it would take about 5,415 years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take 8 weeks of reading 24/7 to finish. ";
+            } 
+        }
+    </script>
+</head>
+<body>
+    <p> This is part of the text of Kara's story. The last sentence will say something about scale of how many books and also something about pressing start.</p>
+<div id="clicky">
+    <input id="btnStart" type="button" value="Start"
+           onclick="printDuration(); showTester(); hideTester()" /></div>
+    <div id="tester" style="display:none"> <p> some of Kara's text from her story goes here. we need to update the word count of this paragraph in the code before we publish. it flows with the rest of the story and it's super cool and at the end we say now press the stop button. </p>
+    <div id="clicky2">
+    <input id="btnStop" type="button" value="I'm done"
+           onclick="stop(); hideTester1();" /></div>
+        <p id="para2"></p>
+       <p id="para3"></p>
+    </div>
+
+
+
+</body>
+</html>
