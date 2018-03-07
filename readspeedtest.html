@@ -36,39 +36,33 @@
         function stop() {
             clearInterval(check);
             check2 = parseInt((83*60)/cnt);
-            check3 = parseInt(853906048000/(check2*525600));
-            check6 = (853906048000/(check2*1440));
-            check5=(853906048000/(check2*10080));
+            check3 = parseInt(309541180000/(check2*525600));
+            check6 = (309541180000/(check2*1440));
+            check5=(309541180000/(check2*10080));
             check4 = parseInt(check5/(32429));
             checkdays = parseInt(check6/(32429));
 
-            document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";
+            document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute&mdash;it would take you '+check3.toLocaleString()+" years to read the 4.76 million Columbia-owned books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";
             check=null;
             if (check4 < 2){
-               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";;
+               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute&mdash;it would take you '+check3.toLocaleString()+" years to read the 4.76 million Columbia-owned books in ReCAP. If the entire Columbia student body shared the load, it would take "+check4.toLocaleString()+" weeks of reading 24/7 to finish.";;
             }
             if (check4 <= 1){
-               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute—it would take you '+check3.toLocaleString()+" years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take "+checkdays.toLocaleString()+" days of reading 24/7 to finish.";
+               document.getElementById("para3").innerHTML = 'You read at '+check2.toLocaleString()+' words per minute&mdash;it would take you '+check3.toLocaleString()+" years to read the 4.76 million Columbia-owned books in ReCAP. If the entire Columbia student body shared the load, it would take "+checkdays.toLocaleString()+" days of reading 24/7 to finish.";
             }
             if(cnt === 0){
-                 document.getElementById("para3").innerHTML = "Cheater. But if you're an average reader, we can still let you know it would take about 5,415 years to read the 13 million books in ReCAP. If the entire Columbia student body shared the load, it would take 8 weeks of reading 24/7 to finish. ";
+                 document.getElementById("para3").innerHTML = "Cheater. But if you're an average reader, we can still let you know it would take about 5,415 years to read the 4.76 million Columbia-owned books in ReCAP. If the entire Columbia student body shared the load, it would take 8 weeks of reading 24/7 to finish. ";
             } 
         }
     </script>
-<style>
-    body{
-        text-align:center;
-    }
-    
-    </style>
 </head>
 <body>
     <p> This is part of the text of a story about how many books Columbia has in an off-site storage library called ReCAP. The last sentence will say something about scale of how many books and then ask the reader to press start. </p>
-<div id="clicky">
+<div id="clicky" align="center">
     <input id="btnStart" type="button" value="Start" 
            onclick="printDuration(); showTester(); hideTester()" /></div>
-    <div id="tester" style="display:none"> <p> We really wanted for people to get a sense of just how huge 13 million is when it comes to books, so I made a little game to let people know how long it would take them to read all of that. This paragraph here is meant to be just another part of the story. At the end, we ask the user to press to stop button. Now you can find out how long it would take you to read 13 million books!</p>
-    <div id="clicky2">
+    <div id="tester" style="display:none"> <p> We really wanted for people to get a sense of just how huge 4.76 million is when it comes to books, so I made a little game to let people know how long it would take them to read all of that. This paragraph here is meant to be just another part of the story. At the end, we ask the user to press to stop button. Now you can find out how long it would take you to read 4.76 million books!</p>
+    <div id="clicky2" style="text-align:center">
     <input id="btnStop" type="button" value="I'm done"
            onclick="stop(); hideTester1();" /></div>
         <p id="para2"></p>
