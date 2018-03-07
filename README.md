@@ -6,7 +6,7 @@ The crime-question programs were created for a story demonstrating the disparity
 
 The readspeed program was created for a story about off-site library storage, meant to give readers a sense of how many books 13 million* (the number stored off site) really is. Demo [here](http://www.columbia.edu/~jeh2212/testing/spec/readspeedtest.html). 
 
-The book-slider is a simple graphic meant to show proportionally what Columbia University gains from collective off-site storage (ReCAP). Demo [here] (http://www.columbia.edu/~jeh2212/testing/spec/book-slider.html).
+The book-slider is a simple graphic meant to show proportionally what Columbia University gains from collective off-site storage (ReCAP). Demo [here](http://www.columbia.edu/~jeh2212/testing/spec/book-slider.html).
 
 Enjoy!
 
